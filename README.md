@@ -44,29 +44,34 @@ That's fine by me.  =)
  
 ## Initial Setup
 
-Everything below here needs to get formatted better)
+Follow these steps to install KaraokePi on fresh install of Raspbian.
 
-From fresh install of Raspbian
-
-    sudo apt-get update (installs latest OS)
-    sudo apt-get install python-dev #required for gevent I believe
-    sudo apt-get install libevent-dev #required for gevent for sure
-    sudo apt-get install pip #required to install Python packages
-    sudo apt-get install git-core #required to get the latest source via github.com
-    sudo apt-get install pykaraoke (installs in main site-packages) #required to get the raspbian pykaraoke library
+```
+    sudo apt-get update  # (installs latest OS)
+    sudo apt-get install python-dev  #required for gevent I believe
+    sudo apt-get install libevent-dev  #required for gevent for sure
+    sudo apt-get install pip  # required to install Python packages
+    sudo apt-get install git-core  # required to get the latest source via github.com
+    sudo apt-get install pykaraoke  # installs in main site-packages
     
-    source bin/activate (to activate your virtual-env)
+    source bin/activate  # to activate your virtual-env
     pip install flask
     pip install gevent
+```
 
 create a virtualenv (make sure that you are using site-packages otherwise can't reference pykaraoke)
-7. go to Desktop
-8. virtualenv KaraokePi
-9. cd KaraokePi
-10. source bin/activate
-11. pip install flask
-12. python KaraokeBerry.py (starts the Flask server)
-13. consider using redis as a backing store, i see the light about redis being a kind of extension of Python with it's awesome datastructures
+
+On the RaspberryPi:
+
+```
+virtualenv KaraokePi
+cd KaraokePi
+source bin/activate
+pip install flask
+python KaraokeBerry.py  # starts the Flask server
+```
+
+Consider using redis as a backing store
 
 TODO:
 
@@ -77,9 +82,13 @@ TODO:
 5. add the pi linux commands to this repository.
 6. create admin interface that looks like windows metro blocks for pause, play, restart, fullscreen toggle, etc.
 
-GETTING STARTED:
-1. navigate to localhost:5000/mobile  (to see the jquery mobile interface in action)
-2. read KaraokeBerry.py to see all the rest calls supported.
+# Running KaraokePi
+
+1. navigate to `http://localhost:5000/mobile`
+
+# API
+
+Read `KaraokeBerry.py` to see all the REST calls supported.
 
 ## About KaraokeBerry
 
