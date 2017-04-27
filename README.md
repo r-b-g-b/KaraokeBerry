@@ -47,16 +47,16 @@ That's fine by me.  =)
 Follow these steps to install KaraokePi on fresh install of Raspbian.
 
 ```
-    sudo apt-get update  # (installs latest OS)
-    sudo apt-get install python-dev  #required for gevent I believe
-    sudo apt-get install libevent-dev  #required for gevent for sure
-    sudo apt-get install pip  # required to install Python packages
-    sudo apt-get install git-core  # required to get the latest source via github.com
-    sudo apt-get install pykaraoke  # installs in main site-packages
+sudo apt-get update  # (installs latest OS)
+sudo apt-get install python-dev  #required for gevent I believe
+sudo apt-get install libevent-dev  #required for gevent for sure
+sudo apt-get install pip  # required to install Python packages
+sudo apt-get install git-core  # required to get the latest source via github.com
+sudo apt-get install pykaraoke  # installs in main site-packages
     
-    source bin/activate  # to activate your virtual-env
-    pip install flask
-    pip install gevent
+source bin/activate  # to activate your virtual-env
+pip install flask
+pip install gevent
 ```
 
 create a virtualenv (make sure that you are using site-packages otherwise can't reference pykaraoke)
